@@ -19,3 +19,13 @@ a{
   width: 80%;
   margin: auto;/*left and right auto margin*/
 }
+
+/*when refresh the browser show the frade*/
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
