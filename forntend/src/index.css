@@ -20,7 +20,7 @@ a{
   margin: auto;/*left and right auto margin*/
 }
 
-/*when refresh the browser show the frade*/
+/*when refresh the browser show the fade*/
 @keyframes fadeIn{
   0%{
     opacity: 0;
