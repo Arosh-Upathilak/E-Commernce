@@ -37,7 +37,7 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v2.0.2
         with:
           args: >
-            -Dsonar.projectKey=my-local-project
+            -Dsonar.projectKey=Full-Stack-Food-Delivery
             -Dsonar.sources=.
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
