@@ -37,8 +37,10 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v2.0.2
         with:
           args: >
-            -Dsonar.projectKey=Full-Stack-Food-Delivery
+            -Dsonar.projectKey=my-local-project
             -Dsonar.sources=.
-            -Dsonar.host.url=http://localhost:9000
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: http://localhost:9000
+
+
