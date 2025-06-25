@@ -8,7 +8,7 @@ const PlaceOrder = () => {
   return (
     <form action="" className='place-order'>
       <div className="place-order-left">
-        <p className="title">Deliverty informaion</p>
+        <p className="title">Delivery information</p>
         <div className="multi-fields">
           <input type="text" placeholder='First Name' />
           <input type="text" placeholder='Last Name' />
