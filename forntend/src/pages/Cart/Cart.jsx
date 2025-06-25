@@ -56,7 +56,7 @@ const Cart = () => {
               <b>${getTocartTotal()+2}</b>
             </div>
           </div>
-          <button>PROCEDD TO CHECKPUT</button>
+          <button>PROCEED TO CHECKOUT</button>
         </div>
         <div className="cart-promocode">
           <div>
