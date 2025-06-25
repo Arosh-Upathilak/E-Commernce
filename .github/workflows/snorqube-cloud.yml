@@ -32,7 +32,7 @@ jobs:
 
       - name: Install forntend dependencies
         run: |
-          cd frontend
+          cd forntend
           npm install
 
       - name: Run SonarQube Scan
