@@ -8,7 +8,7 @@ const PlaceOrder = () => {
   return (
     <form action="" className='place-order'>
       <div className="place-order-left">
-        <p className="title">Deliverty informaion</p>
+        <p className="title">Delivery information</p>
         <div className="multi-fields">
           <input type="text" placeholder='First Name' />
           <input type="text" placeholder='Last Name' />
@@ -44,7 +44,7 @@ const PlaceOrder = () => {
               <b>${getTocartTotal()!==0?getTocartTotal() + 2:0}</b>
             </div>
           </div>
-          <button type='button'>PROCEED TO Payment</button>
+          <button>PROCEED TO PAYMENT</button>
         </div>
       </div>
     </form>
