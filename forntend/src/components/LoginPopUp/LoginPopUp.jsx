@@ -12,8 +12,8 @@ const LoginPopUp = ({setShowLogin}) => {
             <img onClick={()=>setShowLogin(false)} src={assets.cross_icon}alt="" />
         </div>
         <div className="login-popup-inputs">
-            {currentState==="Login"?<></>:  <input type="text"  placeholder='Your name' required />}
-            <input type="text"  placeholder='Your name' required />
+            {currentState==="Login"?<></>:  <input type="text"  placeholder='Full name' required />}
+            <input type="text"  placeholder='Username' required />
             <input type="password"  placeholder='Password' required />
         </div>
        <button>{currentState==="Sign Up"?"Create account":"Login"}</button>
