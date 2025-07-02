@@ -6,8 +6,8 @@ dotenv.config();
 export const connectDB = async () => {
   try {
     const mongoUrl = process.env.MONGODB_URL;
-    if (!mongoUrl) throw new Error('MONGODB_URL not found in .env');
 
+    //use fro when it Code pauses until MongoDB is connected.
     await mongoose.connect(mongoUrl, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
@@ -15,6 +15,5 @@ export const connectDB = async () => {
 
   } catch (error) {
     console.error('MongoDB connection error:', error.message);
-    throw error;
   }
 };
