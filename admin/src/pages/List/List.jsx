@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useCallback } from 'react'
 import './List.css'
 import axios from "axios"
 import { toast } from 'react-toastify'
@@ -8,20 +8,23 @@ const List = ({url}) => {
 
   const [list, setList] = useState([])
 
-  const fetchList = async () => {
-    const response = await axios.get(`${url}/api/food/list`)
-    //console.log(response.data)
+const fetchList = useCallback(async () => {
+  try {
+    const response = await axios.get(`${url}/api/food/list`);
     if (response.data.success) {
-      setList(response.data.data)
+      setList(response.data.data);
+    } else {
+      toast.error("Error");
     }
-    else {
-      toast.error("Error")
-    }
+  } catch (err) {
+    toast.error("Request failed");
+    console.error(err);
   }
+}, [url]); 
 
   useEffect(() => {
     fetchList()
-  }, [])
+  }, [fetchList])
 
   const removeFood =async(foodId)=>{
     //console.log(foodId)
