@@ -65,7 +65,7 @@ const registerUser =async(req,res)=>{
 
 
     }catch(error){
-        console.groupCollapsed(error)
+        console.error(error)
         res.json({success:false,message:"Error"})
     }
 }
