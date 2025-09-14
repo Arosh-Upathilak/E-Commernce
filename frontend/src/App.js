@@ -6,13 +6,14 @@ import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import Footer from './components/Footer/Footer'
 import LoginPopUp from './components/LoginPopUp/LoginPopUp';
-
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
   const [showLogin,setShowLogin] = useState(false)
   return (
     <>
+    <ToastContainer/>
     {showLogin?<LoginPopUp setShowLogin ={setShowLogin} />:<></>}
     <div className="App">
       <Navbar setShowLogin={setShowLogin}/>
@@ -22,7 +23,9 @@ function App() {
         <Route path='/order' element={<PlaceOrder/>} />
       </Routes>
       </div>
+      
       <Footer/>
+      
     </>
   );
 }

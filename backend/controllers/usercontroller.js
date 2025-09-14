@@ -22,11 +22,11 @@ const loginUser = async(req,res)=>{
         }
 
         const token =createToken(user._id)
-        res.json({success:true,token})
+        return res.json({success:true,message:"User login sucessfully",token})
 
     }catch(error){
         console.groupCollapsed(error)
-        res.json({success:false,message:"Error"})
+        return res.json({success:false,message:"Error"})
     }
 
 }
@@ -61,7 +61,7 @@ const registerUser =async(req,res)=>{
 
         const user = await newUser.save()
         const token = createToken(user._id)
-        res.json({success:true,token})
+        return res.json({success:true,message:"User register sucessfully",token})
 
 
     }catch(error){
